@@ -2,7 +2,8 @@ package lotr;
 
 public class Hobbit extends Character {
     public Hobbit() {
-        super(0, 3);
+        hp = 3;
+        power = 0;
     }
 
     public void kick(Character c) {

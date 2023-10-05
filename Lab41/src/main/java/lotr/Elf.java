@@ -3,18 +3,19 @@ package lotr;
 class Elf extends Character {
 
     public Elf() {
-        super(10, 10);
+        hp = 10;
+        power = 10;
     }
 
     public void kick(Character c) {
-        if (c.power < this.power) {
+        if (c.getPower() < power) {
             c.setHp(0);
         } else {
-            c.decreasePower();
+            power--;
         }
     }
 
-    private void decreasePower() {
+    protected void decreasePower() {
         power--;
     }
 
